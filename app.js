@@ -19,19 +19,19 @@ var server = require("http").Server(app);
 var io = require("socket.io").listen(server);
 
 //create MySQL Connection
-app.use(connection(mysql, {
+/*app.use(connection(mysql, {
 	host: 'localhost',
 	user: 'root',
 	password: '',
 	database: 'pricingrequest'
-}, 'request'));
+}, 'request'));*/
 
-/*app.use(connection(mysql, {
+app.use(connection(mysql, {
 	host: 'gator3060.hostgator.com',
 	user: 'nuvzsysa_verify',
 	password: 'wrF*1Lkfng0h',
 	database: 'nuvzsysa_wellryde_broker_verification'
-}, 'request'));*/
+}, 'request'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

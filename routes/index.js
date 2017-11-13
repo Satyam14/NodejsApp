@@ -25,8 +25,8 @@ router.get('/getCompanyCode/:compCode', function(req, res, next) {
                 console.error('SQL Connection error: ', err);
                 return next(err);
             } else {
-                conn.query("SELECT Ride2MD, LogistiCare FROM `vcode` WHERE CompanyCode = '" + compCode + "'", function(err, rows, fields) {
-                //conn.query("SELECT Ride2MD, LogistiCare FROM `broker_list` WHERE CompanyCode = '" + compCode + "'", function(err, rows, fields) {
+                //conn.query("SELECT Ride2MD, LogistiCare FROM `vcode` WHERE CompanyCode = '" + compCode + "'", function(err, rows, fields) {
+                conn.query("SELECT Ride2MD, LogistiCare FROM `broker_list` WHERE CompanyCode = '" + compCode + "'", function(err, rows, fields) {
                     if (err) {
                         console.error('SQL error: ', err);
                         return next(err);
